@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Лабораторная работа №5</title>
+    <link rel="stylesheet" type="text/css" href="Table.css" />
+</head>
+<div class="header">
+    <header>
+        <h3><a href = "Laba 5.html">Основная страница</a>  <a href = "page 2.html">Позиционирование элементов</a> <a href = "Table.html">Таблица</a></h3>
+    </header>
+</div>
+<body>
+<table id="table">
+
+    
+    <caption>Мои любимые исполнители</caption>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Исполнитель</th>
+            <th>Лучший альбом</th>
+            <th>Лучшая песня</th>
+          </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bones</td>
+            <td>IFeelLikeDirt</td>
+            <td>517</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2rbina 2rista</td>
+            <td>Nuclear Rap</td>
+            <td>Листикм</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>$uicideboy$</td>
+            <td>My Liver Will Hand What My Heart Can't</td>
+            <td>Kill yourself(part III)</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Апология</td>
+            <td>Солнце</td>
+            <td>Солнце</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Metallica</td>
+            <td>Metallica</td>
+            <td>Enter Sandman</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Slipknot</td>
+            <td>All Hope Is Gone</td>
+            <td>Psychosocial</td>
+          </tr>
+    
+      
+
+
+</body>
+
+<div class="Form">
+    <br>
+    <br>
+    <h2>Добавить Песню</h2>
+    <form id="Form">
+
+        <label for="number">Номер:</label>
+        <br>
+        <input type="text" id="number">
+
+        <br>
+        <label for="singer">Исполнитель:</label>
+        <br>
+        <input type="text" id="singer">
+
+        <br>
+        <label for="album">Альбом:</label>
+        <br>
+        <input type="text" id="album">
+
+        <br>
+        <label for="song">Лучшая песня:</label>
+        <br>
+        <input type="text" id="song">
+
+
+        <br>
+        <br>
+        <input type="submit" value="Добавить">
+    </form>
+</div>
+
+
+</body>
+
+<script>
+document.getElementById("Form").onsubmit = function (event) {
+event.preventDefault();
+
+var table = document.getElementById("table");
+var row = table.insertRow(-1);
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell3 = row.insertCell(2);
+var cell4 = row.insertCell(3);
+cell1.innerHTML = document.getElementById("number").value;
+cell2.innerHTML = document.getElementById("singer").value;
+cell3.innerHTML = document.getElementById("album").value;
+cell4.innerHTML = document.getElementById("song").value;
+document.getElementById('Form').reset();
+};
+</script>
+</html>
